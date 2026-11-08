@@ -10,3 +10,4 @@ include:
     shield: settings_reset
   - board: nice_nano//zmk
     shield: keyball61_direct_right
+    snippet: studio-rpc-usb-uart
