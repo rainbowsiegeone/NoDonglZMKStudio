@@ -8,7 +8,6 @@
  */
 
 #include "keyball61.dtsi"
-#include <zephyr/dt-bindings/gpio/nordic-nrf-gpio.h>
 #include "keyball61_trackball_split.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
@@ -20,8 +19,7 @@
 
 &pro_micro_spi {
     status = "okay";
-    /* Усиленная мощность вывода NCS: помогает при утечке на линию MOSI */
-    cs-gpios = <&pro_micro 10 (GPIO_ACTIVE_LOW | NRF_GPIO_DRIVE_H0H1)>;
+    cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
         compatible = "pixart,pmw3360";
